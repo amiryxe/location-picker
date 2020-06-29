@@ -5,7 +5,7 @@ import data from '../../util/Data';
 import './List.scss';
 
 const List = () => {
-  const { setCurrentPosition } = useContext(MainContext);
+  const { setCurrentPosition, currentPosition } = useContext(MainContext);
 
   const changePositionHandler = (lat, lng) => {
     setCurrentPosition([lat, lng]);
@@ -16,9 +16,13 @@ const List = () => {
       <ul>
         {data.map((item) => (
           <li key={item.id}>
-            <button onClick={() => changePositionHandler(item.lat, item.lng)}>
-              {item.name}
-            </button>
+            <input
+              type='radio'
+              onClick={() => changePositionHandler(item.lat, item.lng)}
+              name='position'
+              id={item.id}
+            />
+            <label htmlFor={item.id}>{item.name}</label>
           </li>
         ))}
       </ul>

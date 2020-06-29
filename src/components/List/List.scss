@@ -41,13 +41,24 @@
     }
   }
 
-  button {
-    border: none;
-    background: transparent;
-    display: block;
-    cursor: pointer;
+  label {
     width: 100%;
-    padding: 0.5rem;
-    text-align: right;
+    height: 100%;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.2s;
+    padding: 5px;
+  }
+
+  input[type='radio'] {
+    opacity: 0;
+    width: 0;
+    position: absolute;
+  }
+
+  input[type='radio']:checked + label {
+    background: #3cd2ff;
+    border-radius: 5px;
+    padding: 5px;
   }
 }

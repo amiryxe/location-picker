@@ -21,7 +21,7 @@ const MapPreview = () => {
     <Map
       className='map-wrapper'
       center={currentPosition}
-      zoom={15}
+      zoom={16}
       style={{ height: '80vh' }}
     >
       <TileLayer
