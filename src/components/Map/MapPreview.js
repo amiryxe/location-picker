@@ -5,7 +5,6 @@ import data from '../../util/Data';
 import './MapPreview.scss';
 
 import L from 'leaflet';
-
 delete L.Icon.Default.prototype._getIconUrl;
 
 L.Icon.Default.mergeOptions({
