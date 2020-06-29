@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import MainContext from '../../context/mainContext';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import data from '../../util/Data';
 import './MapPreview.scss';
@@ -14,12 +15,12 @@ L.Icon.Default.mergeOptions({
 });
 
 const MapPreview = () => {
-  const position = [32.633277, 51.666087];
+  const { currentPosition } = useContext(MainContext);
 
   return (
     <Map
       className='map-wrapper'
-      center={position}
+      center={currentPosition}
       zoom={15}
       style={{ height: '80vh' }}
     >
