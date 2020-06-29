@@ -24,7 +24,7 @@ const List = () => {
               }
               name='position'
               id={item.id}
-              checked={item.id == active}
+              checked={item.id === active}
             />
             <label htmlFor={item.id}>{item.name}</label>
           </li>
