@@ -1,3 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Location Picker on Map - [Demo](https://amirsaa.github.io/location-picker/)
 
-## Available Scripts
+## Dependencies
+
+- CRA
+- Leaflet
+- React Leaflet
+- SCSS
+- Context API
+- Vazir Font
