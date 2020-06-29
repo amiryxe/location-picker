@@ -4,8 +4,8 @@ import data from '../../util/Data';
 const List = () => {
   return (
     <div>
-      {data.map((item, index) => (
-        <li key={index}>{item.name}</li>
+      {data.map((item) => (
+        <li key={item.id}>{item.name}</li>
       ))}
     </div>
   );

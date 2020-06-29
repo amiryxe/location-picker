@@ -3,6 +3,8 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
+  background: #eee;
+  font-family: 'Vazir', sans-serif;
 }
 
 .container {

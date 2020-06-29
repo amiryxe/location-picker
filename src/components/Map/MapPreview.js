@@ -1,6 +1,7 @@
 import React from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import data from '../../util/Data';
+import './MapPreview.scss';
 
 import L from 'leaflet';
 
@@ -16,14 +17,19 @@ const MapPreview = () => {
   const position = [32.633277, 51.666087];
 
   return (
-    <Map center={position} zoom={15} style={{ height: '90vh' }}>
+    <Map
+      className='map-wrapper'
+      center={position}
+      zoom={15}
+      style={{ height: '90vh' }}
+    >
       <TileLayer
         url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       />
 
-      {data.map((item, index) => (
-        <Marker key={index} position={[item.lat, item.lng]}>
+      {data.map((item) => (
+        <Marker key={item.id} position={[item.lat, item.lng]}>
           <Popup>{item.name}</Popup>
         </Marker>
       ))}

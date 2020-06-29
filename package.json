@@ -8,10 +8,12 @@
     "@testing-library/user-event": "^7.1.2",
     "google-map-react": "^1.1.7",
     "leaflet": "^1.6.0",
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-leaflet": "^2.7.0",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "vazir-font": "^26.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
