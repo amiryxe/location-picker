@@ -2,12 +2,9 @@ import React, { useState } from 'react';
 import MainContext from './mainContext';
 
 const MainState = (props) => {
-  const [currentPosition, setCurrentPosition] = useState([
-    32.633277,
-    51.666087,
-  ]);
+  const [currentPosition, setCurrentPosition] = useState([32.637253, 51.65407]);
 
-  const [active, setActive] = useState(7);
+  const [active, setActive] = useState(5);
 
   return (
     <MainContext.Provider

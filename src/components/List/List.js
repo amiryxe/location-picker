@@ -16,7 +16,7 @@ const List = () => {
     <div className='list-wrapper'>
       <ul>
         {data.map((item) => (
-          <li key={item.id}>
+          <li key={item.id} id={'item' + item.id}>
             <input
               type='radio'
               onChange={() =>
