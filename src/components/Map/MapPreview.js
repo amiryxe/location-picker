@@ -21,7 +21,7 @@ const MapPreview = () => {
       className='map-wrapper'
       center={position}
       zoom={15}
-      style={{ height: '90vh' }}
+      style={{ height: '80vh' }}
     >
       <TileLayer
         url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
