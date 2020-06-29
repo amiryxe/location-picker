@@ -7,11 +7,16 @@ const MainState = (props) => {
     51.666087,
   ]);
 
+  const [active, setActive] = useState(7);
+
   return (
     <MainContext.Provider
       value={{
         currentPosition,
         setCurrentPosition,
+
+        active,
+        setActive,
       }}
     >
       {props.children}

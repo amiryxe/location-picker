@@ -5,10 +5,11 @@ import data from '../../util/Data';
 import './List.scss';
 
 const List = () => {
-  const { setCurrentPosition, currentPosition } = useContext(MainContext);
+  const { setCurrentPosition, active, setActive } = useContext(MainContext);
 
-  const changePositionHandler = (lat, lng) => {
+  const changePositionHandler = (lat, lng, id) => {
     setCurrentPosition([lat, lng]);
+    setActive(id);
   };
 
   return (
@@ -18,9 +19,12 @@ const List = () => {
           <li key={item.id}>
             <input
               type='radio'
-              onClick={() => changePositionHandler(item.lat, item.lng)}
+              onChange={() =>
+                changePositionHandler(item.lat, item.lng, item.id)
+              }
               name='position'
               id={item.id}
+              checked={item.id == active}
             />
             <label htmlFor={item.id}>{item.name}</label>
           </li>

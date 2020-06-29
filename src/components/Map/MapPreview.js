@@ -15,7 +15,7 @@ L.Icon.Default.mergeOptions({
 });
 
 const MapPreview = () => {
-  const { currentPosition } = useContext(MainContext);
+  const { currentPosition, setActive } = useContext(MainContext);
 
   return (
     <Map
@@ -30,7 +30,11 @@ const MapPreview = () => {
       />
 
       {data.map((item) => (
-        <Marker key={item.id} position={[item.lat, item.lng]}>
+        <Marker
+          key={item.id}
+          position={[item.lat, item.lng]}
+          onclick={() => setActive(item.id)}
+        >
           <Popup>{item.name}</Popup>
         </Marker>
       ))}
