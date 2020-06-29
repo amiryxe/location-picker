@@ -7,7 +7,9 @@ const List = () => {
     <div className='list-wrapper'>
       <ul>
         {data.map((item) => (
-          <li key={item.id}>{item.name}</li>
+          <li key={item.id}>
+            <button>{item.name}</button>
+          </li>
         ))}
       </ul>
     </div>
