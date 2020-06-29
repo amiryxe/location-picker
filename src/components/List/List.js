@@ -5,9 +5,11 @@ import './List.scss';
 const List = () => {
   return (
     <div className='list-wrapper'>
-      {data.map((item) => (
-        <li key={item.id}>{item.name}</li>
-      ))}
+      <ul>
+        {data.map((item) => (
+          <li key={item.id}>{item.name}</li>
+        ))}
+      </ul>
     </div>
   );
 };

@@ -2,4 +2,35 @@
   background: #fff;
   border-radius: 1rem;
   padding: 1rem;
+
+  direction: rtl;
+
+  ul {
+    list-style: none;
+    padding: 1rem;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.03);
+    }
+
+    &::-webkit-scrollbar {
+      width: 8px;
+      background-color: rgba(0, 0, 0, 0.03);
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    li {
+      padding: 0.5rem;
+      border-bottom: 2px solid #eee;
+    }
+  }
 }
