@@ -1,5 +1,6 @@
 import React from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
+import data from '../../util/Data';
 
 import L from 'leaflet';
 
@@ -12,21 +13,20 @@ L.Icon.Default.mergeOptions({
 });
 
 const MapPreview = () => {
-  const position = [32.640724, 51.666823];
+  const position = [32.633277, 51.666087];
 
   return (
-    <Map center={position} zoom={15} style={{ height: '100vh' }}>
+    <Map center={position} zoom={15} style={{ height: '90vh' }}>
       <TileLayer
         url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       />
-      <Marker position={position}>
-        <Popup>
-          A pretty CSS3 popup.
-          <br />
-          Easily customizable.
-        </Popup>
-      </Marker>
+
+      {data.map((item, index) => (
+        <Marker key={index} position={[item.lat, item.lng]}>
+          <Popup>{item.name}</Popup>
+        </Marker>
+      ))}
     </Map>
   );
 };

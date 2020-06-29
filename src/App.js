@@ -7,7 +7,7 @@ import './App.css';
 function App() {
   return (
     <div className='container'>
-      <div style={{ width: 300 }}>
+      <div style={{ width: 450 }}>
         <MapPreview />
       </div>
       <div style={{ width: 300 }}>
