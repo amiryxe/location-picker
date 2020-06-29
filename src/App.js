@@ -1,15 +1,17 @@
 import React from 'react';
-import Map from './components/Map/Map';
-import './App.css';
+import MapPreview from './components/Map/MapPreview';
+import List from './components/List/List';
 import 'leaflet/dist/leaflet.css';
+import './App.css';
 
 function App() {
   return (
     <div className='container'>
-      <div>scroll</div>
-
-      <div>
-        <Map />
+      <div style={{ width: 300 }}>
+        <MapPreview />
+      </div>
+      <div style={{ width: 300 }}>
+        <List />
       </div>
     </div>
   );

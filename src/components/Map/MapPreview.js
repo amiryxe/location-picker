@@ -1,11 +1,17 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 
-const Mapp = () => {
-  useEffect(() => {
-    window.dispatchEvent(new Event('resize'));
-  }, []);
+import L from 'leaflet';
 
+delete L.Icon.Default.prototype._getIconUrl;
+
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
+  iconUrl: require('leaflet/dist/images/marker-icon.png'),
+  shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
+});
+
+const MapPreview = () => {
   const position = [32.640724, 51.666823];
 
   return (
@@ -25,4 +31,4 @@ const Mapp = () => {
   );
 };
 
-export default Mapp;
+export default MapPreview;
