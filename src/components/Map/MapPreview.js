@@ -14,7 +14,7 @@ L.Icon.Default.mergeOptions({
 });
 
 const MapPreview = () => {
-  const { currentPosition, setActive } = useContext(MainContext);
+  const { currentPosition, setActive, active } = useContext(MainContext);
 
   const clickMarkerHandler = (id) => {
     setActive(id);
@@ -39,6 +39,7 @@ const MapPreview = () => {
           key={item.id}
           position={[item.lat, item.lng]}
           onclick={() => clickMarkerHandler(item.id)}
+          opacity={active === item.id ? 1 : 0.6}
         >
           <Popup>{item.name}</Popup>
         </Marker>
