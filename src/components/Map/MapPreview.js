@@ -38,7 +38,7 @@ const MapPreview = () => {
         <Marker
           key={item.id}
           position={[item.lat, item.lng]}
-          onclick={() => clickMarkerHandler(item.id)}
+          onClick={() => clickMarkerHandler(item.id)}
           opacity={active === item.id ? 1 : 0.6}
         >
           <Popup>{item.name}</Popup>
