@@ -29,10 +29,11 @@ button {
 }
 
 h1 {
-  font-family: monospace;
+  font-family: Helvetica, sans-serif;
   color: #333;
   font-size: 18px;
   padding-top: 1rem;
+  font-weight: bolder;
 }
 
 .info-detail {
