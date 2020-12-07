@@ -1,4 +1,4 @@
-Location Picker on Map - [Demo](https://amirsaa.github.io/location-picker/)
+Location Picker on Map - [Demo](https://amiryxe.github.io/location-picker/)
 
 ## Dependencies
 
