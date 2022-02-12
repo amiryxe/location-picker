@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import MainContext from '../../context/mainContext';
-import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
+import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import data from '../../util/Data';
 import './MapPreview.scss';
 
@@ -23,7 +23,7 @@ const MapPreview = () => {
   };
 
   return (
-    <Map
+    <MapContainer
       className='map-wrapper'
       center={currentPosition}
       zoom={16}
@@ -44,7 +44,7 @@ const MapPreview = () => {
           <Popup>{item.name}</Popup>
         </Marker>
       ))}
-    </Map>
+    </MapContainer>
   );
 };
 
