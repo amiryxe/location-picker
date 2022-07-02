@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/location-picker/static/css/main.6b413ac4.css",
-    "main.js": "/location-picker/static/js/main.74c7c83c.js",
+    "main.css": "/location-picker/static/css/main.89852d7e.css",
+    "main.js": "/location-picker/static/js/main.584bbf08.js",
     "static/media/Vazir-Light.eot": "/location-picker/static/media/Vazir-Light.dd27df7f828b4a65cede.eot",
     "static/media/Vazir-Light.ttf": "/location-picker/static/media/Vazir-Light.cbb41bbc80aabe4a8be5.ttf",
     "static/media/Vazir-Bold.eot": "/location-picker/static/media/Vazir-Bold.ce0efe6cea93b773470c.eot",
@@ -27,11 +27,11 @@
     "static/media/Vazir-Thin.woff2": "/location-picker/static/media/Vazir-Thin.84fabf66ff703ce087e8.woff2",
     "static/media/Vazir-Regular.woff2": "/location-picker/static/media/Vazir-Regular.a360dc26407972d3cb7d.woff2",
     "index.html": "/location-picker/index.html",
-    "main.6b413ac4.css.map": "/location-picker/static/css/main.6b413ac4.css.map",
-    "main.74c7c83c.js.map": "/location-picker/static/js/main.74c7c83c.js.map"
+    "main.89852d7e.css.map": "/location-picker/static/css/main.89852d7e.css.map",
+    "main.584bbf08.js.map": "/location-picker/static/js/main.584bbf08.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b413ac4.css",
-    "static/js/main.74c7c83c.js"
+    "static/css/main.89852d7e.css",
+    "static/js/main.584bbf08.js"
   ]
 }
