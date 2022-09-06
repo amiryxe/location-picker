@@ -1,15 +1,15 @@
-import { useContext } from 'react';
-import MainContext from '../../context/mainContext';
-import data from '../../util/Data';
-import './List.scss';
+import { useContext } from 'react'
+import MainContext from '../../context/mainContext'
+import data from '../../util/Data'
+import './List.scss'
 
-const List = () => {
-  const { setCurrentPosition, active, setActive } = useContext(MainContext);
+export default function List() {
+  const { setCurrentPosition, active, setActive } = useContext(MainContext)
 
   const changePositionHandler = (lat, lng, id) => {
-    setCurrentPosition([lat, lng]);
-    setActive(id);
-  };
+    setCurrentPosition([lat, lng])
+    setActive(id)
+  }
 
   return (
     <div className='list-wrapper'>
@@ -30,7 +30,5 @@ const List = () => {
         ))}
       </ul>
     </div>
-  );
-};
-
-export default List;
+  )
+}
