@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useRef, useEffect } from 'react'
 import MainContext from '../../context/mainContext'
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
 import data from '../../util/Data'
@@ -14,10 +14,15 @@ L.Icon.Default.mergeOptions({
 
 export default function MapPreview() {
   const { currentPosition, setActive, active } = useContext(MainContext)
+  const mapRef = useRef()
+
+  useEffect(() => {
+    mapRef.current?.flyTo(currentPosition);
+  }, [currentPosition])
 
   const clickMarkerHandler = (id) => {
     setActive(id)
-    let item = document.getElementById('item' + id)
+    const item = document.getElementById('item' + id)
     item.scrollIntoView()
   }
 
@@ -27,6 +32,7 @@ export default function MapPreview() {
       center={currentPosition}
       zoom={16}
       style={{ height: '80vh' }}
+      whenCreated={mapInstance => { mapRef.current = mapInstance }}
     >
       <TileLayer
         url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
