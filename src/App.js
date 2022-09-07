@@ -1,13 +1,12 @@
-import React from 'react';
-import MapPreview from './components/Map/MapPreview';
-import List from './components/List/List';
-import Info from './components/Info';
-import MainState from './context/MainState';
-import 'vazir-font/dist/font-face.css';
-import 'leaflet/dist/leaflet.css';
-import './App.css';
+import MapPreview from './components/Map/MapPreview'
+import List from './components/List/List'
+import Info from './components/Info'
+import MainState from './context/MainState'
+import 'vazir-font/dist/font-face.css'
+import 'leaflet/dist/leaflet.css'
+import './App.css'
 
-function App() {
+export default function App() {
   return (
     <div className='container'>
       <MainState>
@@ -20,7 +19,5 @@ function App() {
         </div>
       </MainState>
     </div>
-  );
+  )
 }
-
-export default App;
