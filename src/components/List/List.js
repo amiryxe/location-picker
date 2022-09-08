@@ -1,6 +1,8 @@
 import { useContext } from 'react'
 import MainContext from '../../context/mainContext'
+
 import data from '../../util/Data'
+
 import './List.scss'
 
 export default function List() {
