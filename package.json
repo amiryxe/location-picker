@@ -11,6 +11,7 @@
     "react-dom": "^17.0.2",
     "react-leaflet": "^3.2.5",
     "react-scripts": "5.0.0",
+    "sass": "^1.54.9",
     "vazirmatn": "^33.0.3"
   },
   "scripts": {
