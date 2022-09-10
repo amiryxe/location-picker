@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import MainContext from './mainContext'
+import React, { useState } from 'react';
+import MainContext from './mainContext';
 
-export default function MainState(props) {
-  const [currentPosition, setCurrentPosition] = useState([32.637253, 51.65407])
+const MainState = (props) => {
+  const [currentPosition, setCurrentPosition] = useState([32.637253, 51.65407]);
 
-  const [active, setActive] = useState(5)
+  const [active, setActive] = useState(5);
 
   return (
     <MainContext.Provider
@@ -18,5 +18,7 @@ export default function MainState(props) {
     >
       {props.children}
     </MainContext.Provider>
-  )
-}
+  );
+};
+
+export default MainState;
