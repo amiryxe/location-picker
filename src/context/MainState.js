@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import MainContext from './mainContext'
 
-const MainState = (props) => {
+export default function MainState(props) {
   const [currentPosition, setCurrentPosition] = useState([32.637253, 51.65407])
 
   const [active, setActive] = useState(5)
@@ -20,5 +20,3 @@ const MainState = (props) => {
     </MainContext.Provider>
   )
 }
-
-export default MainState
