@@ -10,7 +10,7 @@ export default function App() {
   return (
     <div className='container'>
       <MainState>
-        <div style={{ width: 800 }}>
+        <div>
           <MapPreview />
           <Info />
         </div>
