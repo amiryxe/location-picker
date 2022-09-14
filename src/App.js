@@ -4,7 +4,7 @@ import Info from './components/Info'
 import MainState from './context/MainState'
 import 'vazirmatn/Vazirmatn-font-face.css'
 import 'leaflet/dist/leaflet.css'
-import './App.css'
+import './App.scss'
 
 export default function App() {
   return (
