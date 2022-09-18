@@ -41,14 +41,14 @@ export default function MapPreview() {
         attribution='&copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       />
 
-      {data.map((item) => (
+      {data.map(({ id, lat, lng, name }) => (
         <Marker
-          key={item.id}
-          position={[item.lat, item.lng]}
-          onClick={() => clickMarkerHandler(item.id)}
-          opacity={active === item.id ? 1 : 0.6}
+          key={id}
+          position={[lat, lng]}
+          onClick={() => clickMarkerHandler(id)}
+          opacity={active === id ? 1 : 0.6}
         >
-          <Popup>{item.name}</Popup>
+          <Popup>{name}</Popup>
         </Marker>
       ))}
     </MapContainer>
