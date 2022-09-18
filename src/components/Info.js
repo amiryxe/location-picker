@@ -1,8 +1,8 @@
 const Info = () => {
   return (
     <>
-      <h1 style={{ margin: 0 }}>React Location Picker</h1>
-      <span className='info-detail'>CRA, Leaflet, Context API, SCSS</span>
+      <h1>React Location Picker</h1>
+      <span className='info-detail'>React, CRA, Leaflet, Context API, SCSS</span>
     </>
   )
 }
