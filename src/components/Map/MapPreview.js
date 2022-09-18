@@ -1,7 +1,7 @@
 import { useContext, useRef, useEffect } from 'react'
 import MainContext from '../../context/mainContext'
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
-import data from '../../util/Data'
+import data from '../../util/data'
 
 import './MapPreview.scss'
 
